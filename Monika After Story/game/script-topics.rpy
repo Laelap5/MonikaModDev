@@ -99,6 +99,19 @@ label monika_death:
     m "It makes me feel even closer to you when you're here with me."
     return
 
+init 5 python:
+    # List of keywords for the topic.
+    for key in ['my','key','words']:
+        monika_topics.setdefault(key,[])
+        monika_topics[key].append('monika_example') # Identifier
+    monika_random_topics.append('monika_example') # Optional. Remove if you don't want Monika to bring this up at random.
+
+label monika_example:
+    m "This is an example topic."
+    m "I feel like this doesn't actually belong here..."
+    m "Why would somebody just add the example template directly into the mod?"
+    m "They really shouldn't be allowed to contribute to this repository anymore."
+    return
 
 init 5 python:
     #This is a list of keywords for this topic
